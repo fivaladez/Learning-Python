@@ -32,3 +32,8 @@ print varC;
 # Same expression .find = .index
 print varC.find("are");
 print varC.index("are");
+
+large_string = """I'm going to tell you what happend to me last week:
+                  I was driving to my job and then...
+                  end of the story"""
+print large_string

@@ -21,3 +21,10 @@ print "  The values of my dictionary are: ", myDiccionary.values();
 # Clear all members of the dictionary
 myDiccionary.clear();
 print "  This is my dictionary cleared: ", myDiccionary;
+
+myDictionaryX = {"x":1, "y":2}
+for key in myDictionaryX.keys():
+    value = myDictionaryX[key]
+    print key, "=", value
+for key, value in myDictionaryX.items():
+    print key, "=", value

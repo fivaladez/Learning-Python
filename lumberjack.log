@@ -1,0 +1,9 @@
+DEBUG 2018-12-10 13:32:59,365 - Debug message
+INFO 2018-12-10 13:32:59,365 - Info message
+WARNING 2018-12-10 13:32:59,365 - Warning message
+ERROR 2018-12-10 13:32:59,365 - Error message
+CRITICAL 2018-12-10 13:32:59,365 - Critical message
+INFO 2018-12-10 13:32:59,365 - quadratic_formula(1,0,-4)
+DEBUG 2018-12-10 13:32:59,365 -  # Compute the discriminant
+DEBUG 2018-12-10 13:32:59,365 -  # Compute the two roots
+DEBUG 2018-12-10 13:32:59,365 -  # Return the roots

@@ -1,0 +1,7 @@
+Guido van Rossum es un programador holandés graduado en Matemáticas y Ciencias de la Computación por la Universidad de Amsterdam en 1.982.
+
+Es famoso por haber creado el lenguaje de programación Python. En el ambiente de los desarrolladores del lenguaje Python también se le conoce por el título BDFL (“Benevolent Dictator for Life’“), teniendo asignada la tarea de fijar las directrices sobre la evolución de Python, así como la de tomar decisiones finales sobre el lenguaje que todos los desarrolladores acatan. Van Rossum tiene fama de ser bastante conservador, realizando pocos cambios al lenguaje entre versiones sucesivas, intentando mantener siempre la compatibilidad con versiones anteriores.
+
+En el año 2001 recibió el FSF Award for the Advancement of Free Software como reconocimiento por su trabajo.
+
+Ha trabajado en el Centrum Wiskunde & Informatica (CWI) en Amsterdam, en el United States National Institute of Standards and Technology (NIST), en Maryland, y en el Corporation for National Research Initiatives (CNRI), en Virginia. En diciembre de 2005 se mudó a California para trabajar en Google, donde ha creado una revisión de Python basado en web para Google. Actualmente dedica la mitad de su jornada a evolucionar Python desde Google.

@@ -35,3 +35,16 @@ print "  Whats larger value of my family? ", min(FamilyTuple);
 varString = "Hola";
 print "  This is a string: ", varString;
 print "  This is a tupla: ", tuple(varString);#Casting
+
+empty_tuple = ()
+# This line is just a string, to make it a tuple you have to add a ,
+#test1 = ("a")
+# This is a tuple with only one member
+test1 = ("a",)
+test2 = ("a","b")
+test3 = ("a","b","c")
+
+print empty_tuple
+print test1
+print test2
+print test3

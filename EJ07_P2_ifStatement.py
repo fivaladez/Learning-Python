@@ -29,3 +29,12 @@ if a > b and a < 100:
 # Operator "or" is equal to || in C
 elif a < b or a != a:
     print b;
+
+# ==================== if, then, else ====================
+input = raw_input(" Please enter an integer: ")
+number = int(input)
+
+if (number % 2) == (0):
+    print "Your number is even."
+else:
+    print "Your number is odd."

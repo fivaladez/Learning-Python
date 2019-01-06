@@ -9,7 +9,8 @@ def plusTen(y):
     return y+10;
 
 print plusTen(34);
-
+# firstName = "Ivan" is a key argument, those key arguments must be at the end of argumente in the function
+# this is in case that also there is at least 1 required argument
 def nameFunction(firstName = "Ivan",lastName = "Valadez"):
     print "Hello %s %s" % (firstName, lastName);
 
@@ -52,3 +53,7 @@ def example2 (**myDictionary):
 myDictionary = {"mom": 40, "dad":45};
 # To pass a dictionary as argument
 example2(**myDictionary);
+
+def f():
+    #It is a line to do nothing, but necessary to acomplish functions rules of at least one line
+    pass
