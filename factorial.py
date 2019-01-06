@@ -18,16 +18,18 @@ def get_factorial(n):
     return value
 
 def get_factorial_2(n):
+    # Factorial algorithm
     value = 1
     for i in range(n):
         i += 1
         value *= i
     return value
 
+print "\n  "
 t0 = time.time()
 for n in range(1, 1000):
-    #print "\n  ", n, ":", get_factorial(n)
-    #print "\n  ", n, ":", get_factorial_2(n)
-    get_factorial(n)
+    #print "  ", n, ":", get_factorial(n)
+    #print "  ", n, ":", get_factorial_2(n)
+    get_factorial_2(n)
 t1 = time.time()
-print "Time required: ", t1-t0
+print "\n Time required: ", t1-t0
