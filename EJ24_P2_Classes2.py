@@ -17,8 +17,8 @@ class User:
         self.__secret_count += 1
     def __del__(self):
         """This is a destructor for class User"""
-        User = self.__class__.__name__
-        print User, "destroyed"
+        class_name = self.__class__.__name__
+        print class_name, "destroyed"
 
 user = User("Ivan", "09/02/1996")
 print user.name
