@@ -19,7 +19,6 @@ class DadClass:
     #NOTE: You shall always let the parameter self in a function inside of a class
     #      without it, it won't work. The function will create another variable
     #      instead of make reference to an existent one
-
 class sonClass(DadClass):
     __activity = "Soccer"
     def getVar(self):
