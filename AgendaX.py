@@ -5,11 +5,6 @@ clear = lambda: os.system('cls')
 fp_path = os.getcwd() + os.sep + "Principal_Agenda.py"
 ft_path = os.getcwd() + os.sep + "Temporary_Agenda.py"
 
-
-
-personDict = {}
-# name:[info, ..., info]
-
 def main():
     """"""
     while True:
@@ -43,63 +38,74 @@ def menu():
 
 def add_contact():
     name_to_add = ""
-    infoList = [""] * 2 #Initialize a list for 2 spaces
+    cellphone_number = ""
+    e_mail = ""
     clear()
     print "\n\n    ===== ADD CONTACT ====="
-    name_to_add = raw_input("\n\n    Introduce the complete name to add: ")
 
-    infoList[0] = raw_input("\n    Introduce the cellphone add: ")
-    infoList[1] = raw_input("\n    Introduce the e-mail to add: ")
+    name_to_add      = raw_input("\n\n    Introduce the complete name to add: ")
+    cellphone_number = raw_input("\n    Introduce the cellphone add: ")
+    e_mail           = raw_input("\n    Introduce the e-mail to add: ")
 
-    personDict[name_to_add] = infoList
-
-    print "\n    You intruduced: " + name_to_add +  ": ", personDict[name_to_add]
+    print "\n    You intruduced: " + name_to_add + "  " + cellphone_number + "  " + e_mail
 
     with open( fp_path, "a") as fp:
         fp.write( name_to_add )
-        fp.write( " " )
-        fp.write( infoList[0] )
-        fp.write( " " )
-        fp.write( infoList[1] )
+        fp.write( "  " )
+        fp.write( cellphone_number )
+        fp.write( "  " )
+        fp.write( e_mail )
         fp.write( "\n\n" )
 
     raw_input("\n\n    Press<enter> to exit")
 
 def look_for_contact():
     name_to_look_for = ""
+    line_found = 0
     clear()
     print "\n\n    ===== LOOK FOR A CONTACT ====="
     name_to_look_for = raw_input("\n\n    Introduce the complete name to look for: ")
 
     with open( fp_path, "r") as fp:
-        agenda_file = fp.read()
+        agenda_file = fp.readlines()
 
-    if name_to_look_for in agenda_file:
-        location = agenda_file.find( name_to_look_for )
-        print "\n    " + agenda_file[ location: location + 40]
-    else:
-        print "\n    That contact doesn't exist!"
+        for line in agenda_file:
+            if name_to_look_for in line:
+                print "\n    ", line
+                line_found = 1
+
+        if 0 == line_found:
+            print "\n    That contact doesn't exist!"
 
     raw_input("\n\n    Press<enter> to exit")
 
 def eliminate_contact():
     name_to_eliminate = ""
+    line_eliminated = 0
     clear()
     print "\n\n    ===== ELIMINATE A CONTACT ====="
     name_to_eliminate = raw_input("\n\n    Introduce the complete name to eliminate: ")
 
     with open( fp_path, "r") as fp:
-        agenda_file = fp.read()
+        agenda_file = fp.readlines()#Return a list of the lines
+        print agenda_file
+        print "\n\n    ========== "
 
-    if name_to_eliminate in agenda_file:
-        location = agenda_file.find( name_to_eliminate )
-        with open( ft_path, "w") as ft:
-            ft.write( agenda_file[ : location ] )
-            ft.write( agenda_file[location + 40 : ] )
-            print location
+        for line in agenda_file:
+            if name_to_eliminate in line:
+                print "\n    ", line
+                line_eliminated = 1
+            else:
+                with open( ft_path, "a") as ft:
+                    ft.write( line )
+                    ft.write( "\n" )
+                    print "    Reached"
 
-    else:
-        print "\n    That contact doesn't exist!"
+        if 0 == line_eliminated:
+            print "\n    That contact doesn't exist!"
+
+    #os.remove( fp_path )
+    #os.rename( ft_path, fp_path )
 
     raw_input("\n\n    Press<enter> to exit")
 
