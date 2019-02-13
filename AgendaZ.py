@@ -1,9 +1,12 @@
 import os, sys
 
+clear = lambda: os.system('cls')
+
 fp = open( os.getcwd() + os.sep + "Principal_Agenda.py", "a+")
 fp.close()
 ft = open( os.getcwd() + os.sep + "Temporary_Agenda.py", "a+")
 ft.close()
+
 
 personDict = {}
 # name:infoList[]
@@ -25,7 +28,7 @@ def main():
         else:
             print option, " is not a valid option"
 
-def menu(self):
+def menu():
     print "    \n\n ===== MENU ====="
     print "    \n1. Add a contact"
     print "    \n2. Look for a contact"
@@ -37,17 +40,21 @@ def menu(self):
 
     return option_menu
 
-def add_contact(self):
-    pass
+def add_contact():
+    clear()
+    print "    \n\n===== ADD CONTACT ====="
 
-def look_for_contact(self):
-    pass
+def look_for_contact():
+    clear()
+    print "    \n\n===== LOOK FOR CONTACT ====="
 
-def eliminate_contact(self):
-    pass
+def eliminate_contact():
+    clear()
+    print "    \n\n===== ELIMINATE CONTACT ====="
 
-def erase_agenda(self):
-    pass
+def erase_agenda():
+    clear()
+    print "    \n\n===== ERASE AGENDA ====="
 
 
 if __name__ == '__main__':
