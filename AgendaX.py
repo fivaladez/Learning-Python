@@ -2,8 +2,8 @@ import os, sys
 
 clear = lambda: os.system('cls')
 
-fp_path = os.getcwd() + os.sep + "Principal_Agenda.py"
-ft_path = os.getcwd() + os.sep + "Temporary_Agenda.py"
+fp_path = os.getcwd() + os.sep + "Principal_Agenda.txt"
+ft_path = os.getcwd() + os.sep + "Temporary_Agenda.txt"
 
 def main():
     """"""
@@ -88,30 +88,31 @@ def eliminate_contact():
 
     with open( fp_path, "r") as fp:
         agenda_file = fp.readlines()#Return a list of the lines
-        print agenda_file
-        print "\n\n    ========== "
 
         for line in agenda_file:
             if name_to_eliminate in line:
-                print "\n    ", line
+                print "\n    The information to eliminate is: ", line
                 line_eliminated = 1
             else:
                 with open( ft_path, "a") as ft:
                     ft.write( line )
-                    ft.write( "\n" )
-                    print "    Reached"
+                    print "    Writing line ...\n"
 
         if 0 == line_eliminated:
             print "\n    That contact doesn't exist!"
 
-    #os.remove( fp_path )
-    #os.rename( ft_path, fp_path )
+    os.remove( fp_path )
+    os.rename( ft_path, fp_path )
 
     raw_input("\n\n    Press<enter> to exit")
 
 def erase_agenda():
     clear()
     print "\n\n    ===== ERASE AGENDA ====="
+
+    os.remove( fp_path )
+
+    raw_input("\n\n    Press<enter> to exit")
 
 
 if __name__ == '__main__':
