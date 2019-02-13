@@ -1,4 +1,4 @@
-import os
+import os, sys
 
 fp = open( os.getcwd() + os.sep + "Principal_Agenda.py", "a+")
 fp.close()
@@ -13,17 +13,17 @@ def main():
     while True:
         option = menu()
         if option == 1:
-            pass
+            add_contact()
         elif option == 2:
-            pass
+            look_for_contact()
         elif option == 3:
-            pass
+            eliminate_contact()
         elif option == 4:
-            pass
+            erase_agenda()
         elif option == 5:
-            pass
+            sys.exit("Good bye ...")
         else:
-            pass
+            print option, " is not a valid option"
 
 def menu(self):
     print "    \n\n ===== MENU ====="
