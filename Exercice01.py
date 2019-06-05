@@ -2,7 +2,7 @@
 class DadClass:
     #Docstring
     """ This is a message for getting knoledge about the class"""
-    __name = ""
+    __name = "" #__variable means that it is a private variable
     __age  = 30
     height = 1.80
     weight = 80.0
