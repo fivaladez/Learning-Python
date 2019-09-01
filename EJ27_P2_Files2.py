@@ -1,11 +1,11 @@
-#EJ27_P2 Files2
+# EJ27_P2 Files2
 import os
 
-print os.path.dirname( os.getcwd() )
+print os.path.dirname(os.getcwd())
 print os.getcwd()
-print os.path.dirname( os.getcwd() + os.sep + "EJ27_P2_Files2.py")
+print os.path.dirname(os.getcwd() + os.sep + "EJ27_P2_Files2.py")
 
-#There are 2 kind of file: Text and Binary
+# There are 2 kind of file: Text and Binary
 f = open("guido_bio.txt")
 text = f.read()
 f.close()
@@ -30,6 +30,6 @@ with open("oceans.txt", "w") as f:
         f.write(ocean)
         f.write("\n")
 # Append mode
-#with open("oceans.txt", "a") as f:
+# with open("oceans.txt", "a") as f:
 #    print 23*"=", file=f
 #    print "These are the 5 oceans.", file=f

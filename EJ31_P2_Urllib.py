@@ -1,11 +1,11 @@
-#EJ31_P2 Urllib
+# EJ31_P2 Urllib
 
-#Modules:
-    # request       - open URL
-    # response      - used internally
-    # error         - request exceptions
-    # parse         - useful URL functions
-    # robotparser   - robots.txt files
+# Modules:
+# request       - open URL
+# response      - used internally
+# error         - request exceptions
+# parse         - useful URL functions
+# robotparser   - robots.txt files
 
 from urllib import request
 

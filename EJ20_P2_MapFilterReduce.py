@@ -6,8 +6,13 @@
 #       -map(f, data):
 #           Returns iterator over
 #           f(a1), f(a2), ..., f(an)
-temps = [("Berlin", 29),("Cairo", 36),("Buenos Aires", 19)]
-c_to_f = lambda data: (data[0], (9/5) * data[1] + 32)
+from functools import reduce
+temps = [("Berlin", 29), ("Cairo", 36), ("Buenos Aires", 19)]
+
+
+def c_to_f(data): return (data[0], (9/5) * data[1] + 32)
+
+
 print list(map(c_to_f, temps))
 # =================================================
 # Filter
@@ -18,7 +23,7 @@ print list(map(c_to_f, temps))
 #           Returns iterator over
 #           f(a1), f(a2), ..., f(an)
 #           where the result of f was true
-data = [1.3,2.7,0.8,4.1,4.3,-0.1]
+data = [1.3, 2.7, 0.8, 4.1, 4.3, -0.1]
 avg = 2.0
 print list(filter(lambda x: x > avg, data))
 
@@ -38,9 +43,12 @@ print list(filter(None, countries))
 #           ...
 #           Step n-1: valn-1 = f(valn-2, an)
 #           Return valn-1
-from functools import reduce
-data = [2,3,5,7,11,13,17,19,23,29]
-multiplier = lambda x, y: x*y
+data = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+
+
+def multiplier(x, y): return x*y
+
+
 print reduce(multiplier, data)
 
 product = 1

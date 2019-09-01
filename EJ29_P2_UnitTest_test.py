@@ -1,10 +1,11 @@
-#EJ29_P2    UnitTest 2
-from  EJ28_P2_UnitTest import circle_area
+# EJ29_P2    UnitTest 2
+from EJ28_P2_UnitTest import circle_area
 import unittest
 from math import pi
 
 # To RUN this code use:
 #   python -m unittest file_name
+
 
 class TestCircleArea(unittest.TestCase):
     def test_area(self):
@@ -12,7 +13,7 @@ class TestCircleArea(unittest.TestCase):
         # assertAlmostEqual( function to test, expected result )
         self.assertAlmostEqual(circle_area(1), pi)
         self.assertAlmostEqual(circle_area(0), 0)
-        self.assertAlmostEqual(circle_area(2.1), pi* 2.1**2)
+        self.assertAlmostEqual(circle_area(2.1), pi * 2.1**2)
 
     def test_values(self):
         # Make sure value errors are raised when necessary

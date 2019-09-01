@@ -1,8 +1,8 @@
-#EJ14_P2    Dates
+# EJ14_P2    Dates
 
-#You MUST import the moduel "datetime"
+# You MUST import the moduel "datetime"
 import datetime
-#help(datetime.date)
+# help(datetime.date)
 
 gvr = datetime.date(1956, 1, 31)
 print gvr
@@ -27,20 +27,20 @@ print launch_datetime
 
 moon_landing = "7/20/1969"
 moon_landing_datetime = datetime.datetime.strptime(moon_landing, "%m/%d/%Y")
-print "\n=== ",moon_landing_datetime, " ===\n"
+print "\n=== ", moon_landing_datetime, " ===\n"
 
-x = datetime.datetime.now();
+x = datetime.datetime.now()
 
-print x;
-print x.year;
+print x
+print x.year
 # ".strftime()" take as paremeter the fromat to return the string
-print x.strftime("%A");
+print x.strftime("%A")
 # "%A" = Name of week day
 # "%B" = Name of Month
 # "%a" = Name of week day abreviation
 # "%b" = Name of Month abreviation
 # For more information: "https://www.w3schools.com/python/python_datetime.asp"
 
-#Create a date object
-y = datetime.datetime(2020, 5, 17);
-print y;
+# Create a date object
+y = datetime.datetime(2020, 5, 17)
+print y

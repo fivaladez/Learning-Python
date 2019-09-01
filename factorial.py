@@ -4,6 +4,8 @@ import time
 # This dictionary store the data already known
 # This is for optimize time for execution
 factorial_cache = {}
+
+
 def get_factorial(n):
     # Check if you have already store that number
     if n in factorial_cache:
@@ -17,6 +19,7 @@ def get_factorial(n):
     factorial_cache[n] = value
     return value
 
+
 def get_factorial_2(n):
     # Factorial algorithm
     value = 1
@@ -25,11 +28,12 @@ def get_factorial_2(n):
         value *= i
     return value
 
+
 print "\n  "
 t0 = time.time()
 for n in range(1, 1000):
-    #print "  ", n, ":", get_factorial(n)
-    #print "  ", n, ":", get_factorial_2(n)
+    # print "  ", n, ":", get_factorial(n)
+    # print "  ", n, ":", get_factorial_2(n)
     get_factorial_2(n)
 t1 = time.time()
 print "\n Time required: ", t1-t0

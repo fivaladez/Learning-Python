@@ -8,7 +8,7 @@ for i in myList:
     print "\n ", myList2
 print myList2
 
-myDictionary = {"x":1, "y":2}
+myDictionary = {"x": 1, "y": 2}
 for key in myDictionary.keys():
     value = myDictionary[key]
     print key, "=", value

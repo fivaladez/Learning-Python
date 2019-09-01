@@ -1,17 +1,17 @@
-#EJ30_P2 Exceptions
+# EJ30_P2 Exceptions
 
-#try:
-    #Runs first
-    # < code >
-#except:
-    #Runs if exception pccurs in try block
-    # < code >
-#else:
-    # Executes if try block *succeeds*
-    # < code >
-#finally:
-    # This code #always* Executes
-    # < code >
+# try:
+# Runs first
+# < code >
+# except:
+# Runs if exception pccurs in try block
+# < code >
+# else:
+# Executes if try block *succeeds*
+# < code >
+# finally:
+# This code #always* Executes
+# < code >
 
 # Example
 import logging
@@ -19,9 +19,10 @@ import time
 import os
 
 # Create logger
-logging.basicConfig(filename = os.getcwd() + os.sep + "problems_EJ30.log",
-level = logging.DEBUG)
+logging.basicConfig(filename=os.getcwd() + os.sep + "problems_EJ30.log",
+                    level=logging.DEBUG)
 logger = logging.getLogger()
+
 
 def read_file_timed(path):
     """Return the contents of the file at "path" and measyre time required."""
@@ -39,6 +40,7 @@ def read_file_timed(path):
     finally:
         stop_time = time.time()
         dt = stop_time - start_time
-        logger.info("Time required for {file} = {time}".format(file=path,time=dt))
+        logger.info("Time required for {file} = {time}".format(file=path, time=dt))
 
-data = read_file_timed( os.getcwd() + os.sep + "audio_file.wav" )# 45 MB file
+
+data = read_file_timed(os.getcwd() + os.sep + "audio_file.wav")  # 45 MB file
